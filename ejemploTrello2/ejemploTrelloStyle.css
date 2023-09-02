@@ -1,0 +1,126 @@
+/*Form*/
+/*Estilos generales aplicados a todos los elementos en el documento*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    -ms-overflow-style: none; /*Propiedad específica para Internet Explorer y Edge para ocultar barras de desplazamiento*/
+    scrollbar-width: none; /*Propiedad específica de Firefox para ocultar barras de desplazamiento*/
+}
+
+/*Estilos para personalizar la apariencia de las barras de desplazamiento en navegadores Webkit*/
+* ::-webkit-scrollbar {
+    display: none; /*Oculta las barras de desplazamiento en navegadores Webkit*/
+}
+
+/*Estilos para el contenedor principal del tablero*/
+.tablero {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll; /*Permite el desplazamiento si el contenido excede el tamaño del contenedor*/
+    background-image: url(https://images4.alphacoders.com/592/592367.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/*Estilos para el formulario con ID "trelloForm"*/
+#trelloForm {
+    padding: 32px 32px; /*Espaciado interior del formulario*/
+}
+
+/*Estilos para los campos de entrada dentro del formulario*/
+#trelloForm input {
+    padding: 12px;
+    margin-right: 12px;
+    /*width: 225px;*/
+    min-width: 0;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background-color: aliceblue;
+    font-size: 14px;
+    outline: none; /*Elimina el resaltado al hacer foco en el campo*/
+}
+
+/*Estilos para el botón dentro del formulario*/
+#trelloForm button {
+    padding: 12px 32px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background: aliceblue;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/*Columnas*/
+/*Estilos para el contenedor de columnas*/
+.columnas {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 16px;
+    padding: 24px 32px;
+    overflow: scroll; /*Permite el desplazamiento horizontal si el contenido excede el ancho del contenedor*/
+    height: 100%; /*Ocupa la altura completa del contenedor*/
+}
+
+/*Estilos para los títulos de las columnas*/
+.tituloCol {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/*Estilos para cada columna*/
+.columna {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: aliceblue;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    padding: 12px;
+    border-radius: 4px;
+    width: 312px;
+    min-height: 120px;
+    flex-shrink: 0; /*Evita que la columna se encoja más allá de su tamaño mínimo*/
+}
+
+/*Estilos para cada columna*/
+.columnaAtrasado {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: aliceblue;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    padding: 12px;
+    border-radius: 4px;
+    width: 312px;
+    min-height: 120px;
+    flex-shrink: 0; /*Evita que la columna se encoja más allá de su tamaño mínimo*/
+}
+
+/*Estilos para las tareas individuales dentro de las columnas*/
+.tarea {
+    background: white;
+    color: black;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: move; /*Indica que el elemento se puede arrastrar*/
+}
+
+/*Estilos para una tarea durante el arrastre*/
+.is-dragging {
+    scale: 1.05; /*Incrementa ligeramente el tamaño durante el arrastre*/
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background: rgb(50, 50, 50);
+    color: white;
+}
+
+
+
