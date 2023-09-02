@@ -1,0 +1,66 @@
+<!doctype html>
+    <html lang="en">
+        <head>
+            <!--Importamos hoja de estilos-->
+            <link rel="stylesheet" href="ejemploTrelloStyle.css">
+
+            <!--Importamos el js-->
+            <script src="ejemploTrelloAddTareas.js" defer></script>
+            <script src="ejemploTrelloDrags.js" defer></script>
+            <script src="ejemploTrelloEliminarTareas.js" defer></script>
+
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+           
+            <!-- Bootstrap CSS -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <!-- Optional JavaScript -->
+            
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+            <!--Titulo-->
+            <title>Ejemplo_Trello</title>
+        </head>
+        <body>
+            <!--Tablero completo-->
+            <div class="tablero">
+                <!--Input de nueva tarjeta y boton para agregarla al tablero-->
+                <form id="trelloForm">
+                    <input type="text" placeholder="Nueva tarea" id="cardInput" />
+                    <button type="submit">Agergar + </button>
+                </form>
+
+                <!--Columnas-->
+                <div class="columnas">
+                    <!--Col Tareas-->
+                    <div class="columna" id="trelloCol">
+                        <!--titulo de la columna-->
+                        <h3 class="tituloCol">Tareas</h3>
+
+                        <!--algunas tareas de ejemplo-->
+                        <!--el atributo draggable en el comp p nos permitira arrastrarlo-->
+                        <p class="tarea" draggable="true">Comprar jamon <span class="eliminar">x</span> </p>
+                        <p class="tarea" draggable="true">Ir a la facultad <span class="eliminar">x</span> </p>
+                        <p class="tarea" draggable="true">Ir al medico <span class="eliminar">x</span> </p>
+                    </div>
+
+                    <!--Col En Proceso-->
+                    <div class="columna">
+                        <!--titulo de la columna-->
+                        <h3 class="tituloCol">En Proceso</h3>
+                        <!--algunas tareas de ejemplo-->
+                        <p class="tarea" draggable="true">Estudiar desarrollo web y mobile <span class="eliminar">x</span> </p>
+                    </div>
+
+                    <!--Col Hecho-->
+                    <div class="columna">
+                        <!--titulo de la columna-->
+                        <h3 class="tituloCol">Hecho</h3>
+                        <!--algunas tareas de ejemplo-->
+                        <p class="tarea" draggable="true">Estudiar P2 <span class="eliminar">x</span> </p>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
