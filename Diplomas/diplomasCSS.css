@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.diploma {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.diploma h2 {
+    color: #333;
+}
+
+.diploma p {
+    color: #777;
+}
+
+.diploma a {
+    display: block;
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.diploma a:hover {
+    background-color: #0056b3;
+}
